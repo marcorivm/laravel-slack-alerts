@@ -5,10 +5,18 @@ namespace Spatie\SlackAlerts;
 class SlackAlert
 {
     protected string $webhookUrlName = 'default';
+    protected string $channel = '';
 
     public function to(string $webhookUrlName): self
     {
         $this->webhookUrlName = $webhookUrlName;
+
+        return $this;
+    }
+
+    public function channel(string $channel): self
+    {
+        $this->channel = $channel;
 
         return $this;
     }
