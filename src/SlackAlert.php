@@ -33,6 +33,7 @@ class SlackAlert
             'text' => $text,
             'type' => 'mrkdown',
             'webhookUrl' => $webhookUrl,
+            'channel' => $this->channel,
         ];
 
         $job = Config::getJob($jobArguments);
